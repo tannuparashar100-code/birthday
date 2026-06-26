@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Bhabhi ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Trebuchet MS', 'Segoe UI', sans-serif;
+    background:linear-gradient(135deg,#fff8fb,#eef8ff);
+    color:#444;
+    overflow-x:hidden;
+}
+
+/* Animated Background */
+.hero{
+    padding:90px 20px;
+    text-align:center;
+    background:linear-gradient(120deg,#ffd5e5,#dff3ff,#fff5da);
+    background-size:300% 300%;
+    animation:bgMove 8s ease infinite;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.hero h1{
+    font-size:3.8rem;
+    color:#d81b60;
+    text-shadow:0 3px 10px rgba(255,255,255,.8);
+    margin-top:20px;
+}
+
+.hero h2{
+    margin-top:15px;
+    color:#555;
+    font-size:1.7rem;
+}
+
+.hero p{
+    max-width:900px;
+    margin:25px auto;
+    line-height:1.9;
+    font-size:1.15rem;
+    background:rgba(255,255,255,.7);
+    padding:25px;
+    border-radius:25px;
+    backdrop-filter:blur(5px);
+}
+
+.ribbon{
+    display:inline-block;
+    background:#d81b60;
+    color:white;
+    padding:10px 25px;
+    border-radius:30px;
+    font-size:18px;
+    box-shadow:0 8px 18px rgba(216,27,96,.3);
+}
+
+.title{
+    text-align:center;
+    color:#d81b60;
+    margin:60px 0 25px;
+    font-size:2.5rem;
+}
+
+/* Floating Effects */
+.float{
+    position:fixed;
+    font-size:24px;
+    opacity:.5;
+    animation:floatUp 8s linear infinite;
+    z-index:1;
+}
+
+@keyframes floatUp{
+    from{
+        transform:translateY(100vh);
+    }
+    to{
+        transform:translateY(-120px);
+    }
+}
+
+.gallery{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:28px;
+    padding:20px;
+}
+
+.memory-card{
+    background:white;
+    border-radius:28px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    transition:.4s;
+}
+
+.memory-card:hover{
+    transform:translateY(-10px) scale(1.03);
+}
+
+.imgbox{
+    padding:12px;
+    background:linear-gradient(45deg,#ffd9e8,#dff3ff);
+}
+
+.imgbox img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+.overlay{
+    padding:18px;
+    text-align:center;
+}
+
+.overlay h3{
+    color:#c2185b;
+    margin-bottom:10px;
+}
+
+.overlay p{
+    color:#666;
+    line-height:1.6;
+}.notes{
+    max-width:950px;
+    margin:35px auto;
+    padding:20px;
+}
+
+.note{
+    margin:18px 0;
+    background:white;
+    border-radius:20px;
+    padding:18px 22px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    border-left:6px solid #ff7aa2;
+    transition:.3s;
+}
+
+.note:hover{
+    transform:translateX(8px);
+}
+
+footer{
+    margin-top:50px;
+    padding:35px;
+    text-align:center;
+    background:#d81b60;
+    color:white;
+}
+
+footer h2{
+    margin-bottom:10px;
+}
+
+footer p{
+    line-height:1.8;
+}
+
+/* Music Button */
+.music-btn{
+    position:fixed;
+    top:20px;
+    right:20px;
+    background:#d81b60;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:30px;
+    font-size:16px;
+    cursor:pointer;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    transition:.3s;
+    z-index:1000;
+}
+
+.music-btn:hover{
+    transform:scale(1.08);
+    background:#e91e63;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Floating Decorations -->
+<div class="float" style="left:8%;animation-delay:0s;">🌸</div>
+<div class="float" style="left:25%;animation-delay:2s;">✨</div>
+<div class="float" style="left:60%;animation-delay:4s;">💖</div>
+<div class="float" style="left:85%;animation-delay:1s;">🌷</div>
+
+<!-- Background Music -->
+<audio id="bgMusic" loop autoplay>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" onclick="toggleMusic()">
+🎵 Music
+</button>
+
+<section class="hero">
+    <div class="ribbon">🎂 13 June • Birthday Special 🎂</div>
+
+    <h1>Happy Birthday, Dear Bhabhi ❤️</h1>
+
+    <h2>The Sweetest Soul in Our Family ✨</h2>
+
+    <p>
+        Some people don't just become a part of the family,
+        they become the reason behind countless smiles. 💕<br><br>
+
+        Your kindness, your warmth and your beautiful heart
+        make every little moment feel special.
+        May this birthday fill your life with endless happiness,
+        unforgettable memories, lots of love and every blessing
+        your heart wishes for. 🌷✨
+    </p>
+</section>
+
+<h2 class="title">📸 Little Frames, Big Memories 📸</h2>
+
+<div class="gallery">
+
+<div class="memory-card">
+    <div class="imgbox">
+        <img src="img1.jpg">
+    </div>
+    <div class="overlay">
+        <h3>💕 Our Favourite Duo</h3>
+        <p>The smiles that make every family picture brighter.</p>
+    </div>
+</div>
+
+<div class="memory-card">
+    <div class="imgbox">
+        <img src="img2.jpg">
+    </div>
+    <div class="overlay">
+        <h3>🌿 Grace in Every Step</h3>
+        <p>Wherever you go, elegance follows you naturally.</p>
+    </div>
+</div>
+
+<div class="memory-card">
+    <div class="imgbox">
+        <img src="img3.jpg">
+    </div>
+    <div class="overlay">
+        <h3>✨ Sunshine Soul</h3>
+        <p>You bring light and positivity wherever you go.</p>
+    </div>
+</div>
+
+<div class="memory-card">
+    <div class="imgbox">
+        <img src="img4.jpg">
+    </div>
+    <div class="overlay">
+        <h3>👑 Queen Energy</h3>
+        <p>Confidence, kindness and beauty — all in one.</p>
+    </div>
+</div><div class="memory-card">
+    <div class="imgbox">
+        <img src="img5.jpg">
+    </div>
+    <div class="overlay">
+        <h3>🌸 Beautiful Moments</h3>
+        <p>Every picture tells a story filled with love and happiness.</p>
+    </div>
+</div>
+
+<div class="memory-card">
+    <div class="imgbox">
+        <img src="img6.jpg">
+    </div>
+    <div class="overlay">
+        <h3>💜 Simply Gorgeous</h3>
+        <p>Elegance is effortless when it comes from the heart.</p>
+    </div>
+</div>
+
+<div class="memory-card">
+    <div class="imgbox">
+        <img src="img7.jpg">
+    </div>
+    <div class="overlay">
+        <h3>🤍 Forever Special</h3>
+        <p>Some people make life more beautiful just by being in it.</p>
+    </div>
+</div>
+
+</div>
+
+<h2 class="title">💌 A Few Words From The Heart</h2>
+
+<div class="notes">
+
+    <div class="note">
+        🌷 You are the perfect blend of kindness, elegance and positivity.
+    </div>
+
+    <div class="note">
+        💖 Thank you for making every family moment brighter and more memorable.
+    </div>
+
+    <div class="note">
+        ✨ May your smile never fade and may every dream in your heart come true.
+    </div>
+
+    <div class="note">
+        🌿 Wishing you endless happiness, success, good health and lots of beautiful adventures.
+    </div>
+
+    <div class="note">
+        👑 Official title for today:
+        <b>The Queen of Smiles & Good Vibes!</b>
+    </div>
+
+    <div class="note">
+        🎂 Happy Birthday to the sweetest Bhabhi! May your life always bloom like flowers and sparkle like stars. 🌸✨
+    </div>
+
+</div>
+
+<footer>
+    <h2>❤️ Happy Birthday, Dear Bhabhi ❤️</h2>
+    <p>
+        Thank you for filling our lives with love, laughter and warmth.<br>
+        May this year bring you countless reasons to smile and endless moments to cherish.<br><br>
+        <b>Stay happy, stay blessed and keep shining always! ✨🌷</b>
+    </p>
+</footer>
+
+<script>
+const music = document.getElementById("bgMusic");
+
+window.onload = function () {
+    music.play().catch(() => {});
+};
+
+function toggleMusic() {
+    if (music.paused) {
+        music.play();
+    } else {
+        music.pause();
+    }
+}
+</script>
+
+</body>
+</html>
